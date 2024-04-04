@@ -39,7 +39,7 @@ export const Users = () => {
                         <h2>Nombre: {user.first_name}</h2>
                         <h4>Email: {user.email}</h4>
                         <p>Teléfono: {user.phone_number}</p>
-                        <img src={`https://robohash.org/${user.uid || user.first_name || i}.png`}></img>
+                        <img src={`https://robohash.org/${user.uid || user.first_name || i}.png`} alt={user.first_name}></img>
                         <Button buttonText={"Información"} className={"bg-emerald-500 p-4 m-4 rounded-xl font-bold hover:bg-blue-900 hover:text-white"} onClick={() => showInformation(user.id)}/>
                     </div>
                 )) : "No users"
