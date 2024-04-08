@@ -1,20 +1,20 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Button from '../components/Button'
-import { DataUser } from '../context/UsersDataProvider'
-import { getData } from '../functions/fetch';
+// import { DataUser } from '../context/UsersDataProvider'
+// import { getData } from '../functions/fetch';
 import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
 
-    const { setUsers } = useContext(DataUser);
+    // const { setUsers } = useContext(DataUser);
 
     const navigate = useNavigate();
 
     const listUsers = async () => {
         try {
-            const data = await getData("https://random-data-api.com/api/v2/users?size=100");
-            setUsers(data);
-            localStorage.setItem("users", JSON.stringify(data));
+            // const data = await getData("https://random-data-api.com/api/v2/users?size=100");
+            // setUsers(data);
+            // localStorage.setItem("users", JSON.stringify(data));
             navigate('/users');
         } catch (error) {
             console.error("Error fetching data: ", error);
